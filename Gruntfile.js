@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 				},
 			},
 			images: {
-		      files: ['iwebroot/evernote/media/img/**/*.{png,jpg,gif}'],
+		      files: ['images/**/*.{png,jpg,gif}'],
 		      tasks: ['imagemin'],
 		      options: {
 		      spawn: false,
