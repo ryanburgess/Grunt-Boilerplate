@@ -42,9 +42,9 @@ module.exports = function(grunt) {
 		    dynamic: {                         
 		      files: [{
 		        expand: true,                  
-		        cwd: 'webroot/evernote/media/img/',
+		        cwd: 'images/',
 		        src: ['**/*.{png,jpg,gif}'],   
-		        dest: 'webroot/evernote/media/img/'                 
+		        dest: 'images/'                 
 		      }]
 		    }
 		},
