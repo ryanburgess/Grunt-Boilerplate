@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			css: {
-				files: '**/*.scss',
+				files: 'source/**/*.scss',
 				tasks: ['newer:sass'],
 				options: { 
 					spawn: false,
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 				},
 			},
 			scripts: {
-			    files: '**/*.js',
+			    files: 'js/**/*.js',
 			    tasks: ['newer:uglify'],
 			    options: { 
 					spawn: false,
