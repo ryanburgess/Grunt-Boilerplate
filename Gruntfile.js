@@ -19,6 +19,15 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 		    dist: {
+		    	//files: [
+		      	//{
+		        	//expand: true,
+		          	//cwd: 'js/',
+		         	//src: '**/*.js',
+		           // dest: 'js/',
+		           // ext: '.min.js'
+		      	//},
+		     // ],
 		      files:{
 		     		'webroot/evernote/media/js/project-min.js': ['webroot/evernote/media/js/project.js']
 		      },
