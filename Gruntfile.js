@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: 'source/**/*.scss',
-				tasks: ['newer:sass'],
+				tasks: ['sass'],
 				options: { 
 					spawn: false,
 					livereload: true 
