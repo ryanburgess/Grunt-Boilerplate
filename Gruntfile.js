@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		      	//},
 		     // ],
 		      files:{
-		     		'webroot/evernote/media/js/project-min.js': ['webroot/evernote/media/js/project.js']
+		     		'js/project-min.js': ['js/project.js']
 		      },
 		    }
 		},
