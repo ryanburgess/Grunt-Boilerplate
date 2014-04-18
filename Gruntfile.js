@@ -17,6 +17,15 @@ module.exports = function(grunt) {
                 ],
             }
         },
+        browserify: {
+            dist: {
+                options: {
+                },
+                files: {
+                  'js/project.js': ['js/example1.js', 'js/example2.js']
+                },
+            }
+        },
         uglify: {
             dist: {
               files:{
@@ -67,7 +76,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: 'js/**/*.js',
-                tasks: ['newer:uglify'],
+                tasks: ['newer:browserify', 'uglify'],
                 options: { 
                     spawn: false,
                     livereload: true 
@@ -89,5 +98,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.registerTask('default',['watch']);
 }
