@@ -1,18 +1,38 @@
 {
-  "name": "Examples",
-  "version": "0.0.1",
-  "description": "Grunt for all example projects",
-  "repository": "examples",
-  "author": "Ryan Burgess",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-sass": "~0.7.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-newer": "~0.6.1",
-    "grunt-contrib-imagemin": "~0.5.0",
-    "grunt-sass": "~0.11.0",
-    "grunt-bump": "0.0.13",
-    "grunt-browserify": "~2.0.7"
+  "name": "grunt-boilerplate",
+  "version": "1.0.1",
+  "description": "A Grunt boilerplate to start your next project.",
+  "main": "gruntfile.js",
+  "preferGlobal": true,
+  "bin": {
+    "grunt-boilerplate": "./bin/gruntboilerplate"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanburgess/grunt-boilerplate"
+  },
+  "keywords": [
+    "grunt",
+    "javascript",
+    "boilerplate",
+    "grunt-boilerplate",
+    "web",
+    "front-end",
+    "sass",
+    "build",
+    "start"
+  ],
+  "author": "Ryan Burgess @burgessdryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanburgess/grunt-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ryanburgess/grunt-boilerplate",
+  "dependencies": {
+    "fs-extra": "^0.18.2",
+    "path": "^0.11.14"
   }
 }

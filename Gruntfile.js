@@ -10,12 +10,41 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'source/',
+            cwd: 'sass/',
             src: ['**/*.scss'],
-            dest: 'css/',
+            dest: 'build/css/',
             ext: '.css',
           },
         ],
+      }
+    },
+    sassyclean: {
+      options: {
+        modules: ['sass/modules/**/*.scss', 'sass/themes/**/*.scss', 'sass/layout/**/*.scss', 'sass/base/**/*.scss'],
+        buildfiles: ['sass/**/*.scss'],
+        remove: false,
+        days: null
+      },
+    },
+    jshint: {
+      all: ['js/**/*.js'],
+      options: {
+        reporter: require('jshint-stylish'),
+        curly: true,
+        eqeqeq: true,
+        eqnull: false,
+        browser: true,
+        indent: 2,
+        quotmark: 'single',
+        unused: false,
+        ignores: ['node_modules/**/*.js'],
+        globals: {
+        },
+      },
+    },
+    jsonlint: {
+      sample: {
+        src: [ '**/*.json' ]
       }
     },
     browserify: {
@@ -23,14 +52,14 @@ module.exports = function(grunt) {
         options: {
         },
         files: {
-          'js/project.js': ['js/example1.js', 'js/example2.js']
+          'js/project.js': ['build/js/project.js']
         },
       }
     },
     uglify: {
       dist: {
         files:{
-          'js/project-min.js': ['js/project.js']
+          'build/js/project.min.js': ['build/js/project.js']
         },
       }
     },
@@ -52,22 +81,9 @@ module.exports = function(grunt) {
         }]
       }
     },
-    bump: {
-      options: {
-        files: ['package.json', 'bower.json'],
-        updateConfigs: ['pkg'],
-        commit: true,
-        commitMessage: 'Release v%VERSION%',
-        createTag: true,
-        tagName: 'v%VERSION%',
-        tagMessage: 'Version %VERSION%',
-        commitFiles: ['-a'],
-        push: false
-      }
-    },
     watch: {
       css: {
-        files: 'source/**/*.scss',
+        files: 'sass/**/*.scss',
         tasks: ['sass'],
         options: {
           spawn: false,
@@ -76,7 +92,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: 'js/**/*.js',
-        tasks: ['newer:browserify', 'uglify'],
+        tasks: ['newer:jshint', 'newer:browserify', 'uglify'],
         options: {
           spawn: false,
           livereload: true
@@ -96,7 +112,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-jsonlint');
+  grunt.loadNpmTasks('grunt-sassyclean');
   grunt.registerTask('default',['watch']);
 };
