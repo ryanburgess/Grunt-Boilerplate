@@ -1,6 +1,17 @@
 Grunt Boilerplate
 =============
 A Grunt boilerplate to start your next project.
+
+The boilerplate includes:
+ - [Sass](https://github.com/sindresorhus/grunt-sass)
+ - [SassyClean](https://github.com/ryanburgess/grunt-sassyclean)
+ - [JSHint](https://github.com/gruntjs/grunt-contrib-jshint)
+ - [JSONLint](https://github.com/brandonramirez/grunt-jsonlint)
+ - [Browserify](https://github.com/jmreidy/grunt-browserify)
+ - [Uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+ - [Imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
+ - [Watch](https://github.com/gruntjs/grunt-contrib-watch)
+
  
 ## Install
 ```js
