@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       },
     },
     jshint: {
-      all: ['js/**/*.js'],
+      all: ['bin/*'],
       options: {
         reporter: require('jshint-stylish'),
         curly: true,
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
     },
     jsonlint: {
       sample: {
-        src: [ '**/*.json' ]
+        src: [ 'package.json' ]
       }
     },
     browserify: {
@@ -116,5 +116,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jsonlint');
   grunt.loadNpmTasks('grunt-sassyclean');
+  grunt.registerTask('test',['jshint', 'jsonlint']);
   grunt.registerTask('default',['watch']);
 };
