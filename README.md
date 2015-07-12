@@ -1,6 +1,6 @@
 # Grunt Boilerplate
 
-[![npm version](https://badge.fury.io/js/grunt-boilerplate.svg)](http://badge.fury.io/js/grunt-boilerplate) [![Build Status](https://travis-ci.org/ryanburgess/grunt-boilerplate.svg?branch=master)](https://travis-ci.org/ryanburgess/grunt-boilerplate)
+[![npm version](https://badge.fury.io/js/grunt-boilerplate.svg)](http://badge.fury.io/js/grunt-boilerplate) [![npm](https://img.shields.io/npm/dm/grunt-boilerplate.svg)](https://github.com/ryanburgess/grunt-boilerplate) [![Build Status](https://travis-ci.org/ryanburgess/grunt-boilerplate.svg?branch=master)](https://travis-ci.org/ryanburgess/grunt-boilerplate)
 
 A Grunt boilerplate to start your next project.
 
